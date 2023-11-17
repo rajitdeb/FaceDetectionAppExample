@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FaceDetectionApp</string>
+    <string name="detect_my_face">Detect My Face</string>
+    <string name="analysed_image">Analysed Image</string>
+    <string name="smile_title">Smile (in %):</string>
+    <string name="eyes_open_title">Right Eye Open (in %):</string>
+    <string name="left_eye_open_title">Left Eye Open (in %):</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

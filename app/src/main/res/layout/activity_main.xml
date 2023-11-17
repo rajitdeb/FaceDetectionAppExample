@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/detectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/detect_my_face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/analysedImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/analysed_image"
+        app:layout_constraintEnd_toEndOf="@+id/detectBtn"
+        app:layout_constraintStart_toStartOf="@+id/detectBtn"
+        app:layout_constraintTop_toBottomOf="@+id/detectBtn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageAnalysisResultsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/analysedImage"
+        app:layout_constraintStart_toStartOf="@+id/analysedImage"
+        app:layout_constraintTop_toBottomOf="@+id/analysedImage">
+
+        <TextView
+            android:id="@+id/smileTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smile_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/smileTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/smileTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smileTitleTv"
+            app:layout_constraintTop_toTopOf="@id/smileTitleTv"
+            tools:ignore="RtlSymmetry"
+            tools:text="99.98777%" />
+
+        <TextView
+            android:id="@+id/rightEyeOpenTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eyes_open_title"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/smileTitleTv" />
+
+        <TextView
+            android:id="@+id/rightEyeOpenTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="99.987%"
+            android:textAlignment="viewEnd"
+            android:paddingStart="10dp"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="@id/rightEyeOpenTitleTv"
+            app:layout_constraintBottom_toBottomOf="@id/rightEyeOpenTitleTv"
+            app:layout_constraintStart_toEndOf="@+id/rightEyeOpenTitleTv"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/leftEyeOpenTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/left_eye_open_title"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rightEyeOpenTitleTv" />
+
+        <TextView
+            android:id="@+id/leftEyeOpenTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="99.9871%"
+            android:textAlignment="viewEnd"
+            android:paddingStart="10dp"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="@id/leftEyeOpenTitleTv"
+            app:layout_constraintBottom_toBottomOf="@id/leftEyeOpenTitleTv"
+            app:layout_constraintStart_toEndOf="@+id/leftEyeOpenTitleTv"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
